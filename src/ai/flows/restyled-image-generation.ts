@@ -66,7 +66,7 @@ const restyledImageGenerationFlow = ai.defineFlow(
   },
   async input => {
     const {media} = await ai.generate({
-      model: 'googleai/gemini-2.0-flash-exp',
+      model: 'googleai/gemini-2.0-flash-preview-image-generation',
       prompt: [
         {media: {url: input.photoDataUri}},
         {text: `Restyle this image with the following emotions: ${input.emotions.join(', ')}. Apply the following styles: ${input.styles.join(', ')}.`},
