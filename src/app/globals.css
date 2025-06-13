@@ -2,79 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --background: 0 0% 94.1%; /* #F0F0F0 Very Light Gray */
+    --foreground: 220 15% 25%; /* Dark cool gray for text */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 220 15% 25%;
+
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --popover-foreground: 220 15% 25%;
+
+    --primary: 240 67% 94.1%; /* #E6E6FA Light Lavender */
+    --primary-foreground: 240 50% 30%; /* Darker purple for contrast on lavender */
+
+    --secondary: 240 30% 92%; /* Lighter muted lavender for secondary elements */
+    --secondary-foreground: 240 50% 30%; /* Darker purple for text on secondary */
+
+    --muted: 240 20% 96%; /* Very light muted lavender for backgrounds */
+    --muted-foreground: 220 10% 45%; /* Medium gray for muted text */
+
+    --accent: 240 100% 90%; /* #CCCCFF Soft Periwinkle */
+    --accent-foreground: 240 60% 35%; /* Darker periwinkle for contrast */
+
+    --destructive: 0 72% 51%; /* A slightly softer red for destructive actions */
+    --destructive-foreground: 0 0% 98%; /* Light text on destructive red */
+
+    --border: 240 25% 88%; /* Light lavender-gray border, slightly softer */
+    --input: 240 30% 96%; /* Slightly lighter for input backgrounds, closer to muted */
+    --ring: 240 100% 80%; /* A more vibrant periwinkle for ring, good visibility */
+
     --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --chart-1: 240 70% 70%;
+    --chart-2: 200 70% 65%;
+    --chart-3: 280 70% 70%;
+    --chart-4: 320 70% 75%;
+    --chart-5: 260 70% 60%;
+
+    --sidebar-background: 240 10% 97%;
+    --sidebar-foreground: 220 15% 25%;
+    --sidebar-primary: 240 67% 94.1%;
+    --sidebar-primary-foreground: 240 50% 30%;
+    --sidebar-accent: 240 100% 90%;
+    --sidebar-accent-foreground: 240 60% 35%;
+    --sidebar-border: 240 25% 88%;
+    --sidebar-ring: 240 100% 80%;
   }
+
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    /* Keeping dark mode somewhat aligned with a potential darker lavender/periwinkle theme */
+    --background: 240 10% 12%; /* Dark blue-gray */
+    --foreground: 240 10% 96%; /* Very light gray, almost white */
+
+    --card: 240 10% 18%; /* Slightly lighter dark blue-gray for cards */
+    --card-foreground: 240 10% 96%;
+
+    --popover: 240 10% 18%;
+    --popover-foreground: 240 10% 96%;
+
+    --primary: 240 70% 75%; /* Brighter lavender for dark mode primary */
+    --primary-foreground: 240 50% 15%; /* Very dark purple for contrast */
+
+    --secondary: 240 20% 30%; /* Muted dark lavender */
+    --secondary-foreground: 240 10% 96%;
+
+    --muted: 240 15% 28%; /* Slightly darker muted */
+    --muted-foreground: 240 10% 70%; /* Lighter gray for muted text */
+
+    --accent: 240 100% 80%; /* Brighter periwinkle for dark mode accent */
+    --accent-foreground: 240 60% 20%; /* Dark periwinkle for contrast */
+
+    --destructive: 0 65% 55%; /* Red for destructive actions */
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --border: 240 10% 30%; /* Darker border */
+    --input: 240 10% 30%; /* Darker input background */
+    --ring: 240 100% 75%; /* Bright periwinkle ring */
+
+    --chart-1: 240 60% 65%;
+    --chart-2: 200 60% 60%;
+    --chart-3: 280 60% 65%;
+    --chart-4: 320 60% 70%;
+    --chart-5: 260 60% 55%;
+    
+    --sidebar-background: 240 10% 18%;
+    --sidebar-foreground: 240 10% 96%;
+    --sidebar-primary: 240 70% 75%;
+    --sidebar-primary-foreground: 240 50% 15%;
+    --sidebar-accent: 240 100% 80%;
+    --sidebar-accent-foreground: 240 60% 20%;
+    --sidebar-border: 240 10% 30%;
+    --sidebar-ring: 240 100% 75%;
   }
 }
 
@@ -84,5 +103,9 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    @apply antialiased; /* Add antialiasing for smoother fonts */
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
   }
 }
