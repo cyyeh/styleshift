@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from 'next/image';
@@ -5,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Download, ImageIcon } from 'lucide-react';
 import { LoadingSpinner } from '@/components/ui/loading-spinner';
+import { cn } from '@/lib/utils';
 
 interface ImageDisplayProps {
   originalImageDataUri: string | null;
@@ -62,15 +64,17 @@ export function ImageDisplay({
         )}
 
         <div className="flex-1 min-w-[280px]">
-          <Card className="shadow-lg h-full">
+          <Card className="shadow-lg h-full flex flex-col">
             <CardHeader>
               <CardTitle className="text-xl font-headline text-center">Restyled Photo</CardTitle>
             </CardHeader>
-            <CardContent className="flex flex-col items-center justify-center h-full">
+            <CardContent className="flex-grow">
               {isLoading ? (
-                <LoadingSpinner size="h-12 w-12" text="Styling your image..." />
+                <div className="flex flex-col items-center justify-center h-full">
+                  <LoadingSpinner size="h-12 w-12" text="Styling your image..." />
+                </div>
               ) : error ? (
-                <div className="text-center text-destructive p-4">
+                <div className="flex flex-col items-center justify-center h-full text-center text-destructive">
                   <p className="font-semibold">Oops! Something went wrong.</p>
                   <p className="text-sm">{error}</p>
                 </div>
@@ -91,7 +95,7 @@ export function ImageDisplay({
                   </Button>
                 </div>
               ) : (
-                 <div className="flex flex-col items-center justify-center h-full text-muted-foreground p-4 text-center">
+                 <div className="flex flex-col items-center justify-center h-full text-muted-foreground text-center">
                   <ImageIcon className="w-16 h-16 mb-4 opacity-50" />
                   <p className="text-sm">Your restyled image will appear here.</p>
                   {!originalImageDataUri && <p className="text-xs mt-1">Start by uploading a photo.</p>}
