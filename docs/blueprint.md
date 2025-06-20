@@ -9,6 +9,7 @@
 - Restyling AI: The OpenAI LLM applies the chosen emotional and stylistic adjustments to the uploaded image; it uses a tool to decide when or whether to apply the requested parameters based on an evaluation of how to generate the highest quality output..
 - Image Display: The restyled image is sent back to the app and displayed to the user.
 - Image Download: Allows users to download the newly created image.
+- Dark Mode Toggle: Users can switch between light and dark themes.
 
 ## Style Guidelines:
 
