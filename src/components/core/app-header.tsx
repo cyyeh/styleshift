@@ -1,4 +1,5 @@
 import { StyleShiftLogo } from '@/components/core/styleshift-logo';
+import { ThemeToggle } from '@/components/core/theme-toggle';
 
 export function AppHeader() {
   return (
@@ -10,7 +11,7 @@ export function AppHeader() {
             StyleShift
           </h1>
         </div>
-        {/* Future navigation or actions can go here */}
+        <ThemeToggle />
       </div>
     </header>
   );

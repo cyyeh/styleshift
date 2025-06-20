@@ -11,6 +11,7 @@ StyleShift leverages generative AI to transform your images. You can:
 *   Select different artistic styles (e.g., Abstract, Surreal, Cyberpunk).
 *   Generate a new, restyled image based on your selections.
 *   Download the restyled image.
+*   Toggle between light and dark themes.
 
 ## Tech Stack
 
