@@ -88,6 +88,7 @@ export function PhotoUpload({ onPhotoUploaded, onPhotoCleared, currentPhotoDataU
         
         {!currentPhotoDataUri && (
           <button
+            id="photo-upload-button"
             type="button"
             onClick={triggerFileInput}
             aria-label="Upload a photo"
@@ -105,9 +106,8 @@ export function PhotoUpload({ onPhotoUploaded, onPhotoCleared, currentPhotoDataU
               <Image
                 src={currentPhotoDataUri}
                 alt="Uploaded photo preview"
-                layout="fill"
-                objectFit="contain"
-                className="transition-opacity duration-300 ease-in-out"
+                fill
+                className="object-contain transition-opacity duration-300 ease-in-out"
                 data-ai-hint="user uploaded image"
               />
             </div>

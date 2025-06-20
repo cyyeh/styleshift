@@ -27,9 +27,8 @@ const ImageCard = ({ title, imageDataUri, isPlaceholder = false, placeholderText
           <Image
             src={imageDataUri}
             alt={title}
-            layout="fill"
-            objectFit="contain"
-            className="transition-opacity duration-500 ease-in-out"
+            fill
+            className="object-contain transition-opacity duration-500 ease-in-out"
             data-ai-hint={dataAiHint || (isPlaceholder ? 'placeholder image' : title.toLowerCase().replace(/\s+/g, ' '))}
           />
         ) : (
@@ -84,8 +83,8 @@ export function ImageDisplay({
                     <Image
                       src={restyledImageDataUri}
                       alt="Restyled photo"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      className="object-contain"
                       data-ai-hint="restyled photo abstract"
                     />
                   </div>
